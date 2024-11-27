@@ -1,1 +1,20 @@
 data folder
+
+full.jsonl - тренировочные данные соревнования, на странице соревнования известны как train.jsonl
+# https://github.com/dialogue-evaluation/RuOpinionNE-2024/tree/master
+
+validation.jsonl - валидационные данные соревнования, для проверки предсказаний на этих данных необходимо делать submit на Codalab
+# https://codalab.lisn.upsaclay.fr/competitions/20244#participate-submit_results
+
+train.jsonl, gold.jsonl - разбивка full.jsonl в соотношении 80/20 для локальной оценки
+
+generated.jsonl - 3000 аугментационных объектов, за основы взяты тексты из корпуса Gazeta v.1, кортежи мнения порождены моделями Mistral Large 2 (1500) и Grok-2 (1500)
+# https://github.com/IlyaGusev/gazeta
+
+translated.jsonl - переведенные датасеты MultiBooked (баскский, каталанский) и OpeNER (английский, испанский); размеры не совпадают с конкатенацией оригинальных датасетов, т.к. в результате перевода не все объекты получаются корректными
+# https://github.com/jerbarnes/semeval22_structured_sentiment/tree/master/data
+
+mpqa_chunk.jsonl - перевод части датасета MPQA
+# https://github.com/jerbarnes/semeval22_structured_sentiment/tree/master/data
+
+data.zip - архив с данными для удобного скачивания
